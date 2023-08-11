@@ -8,8 +8,17 @@
     src: url("fonts/4197-font.ttf");
   }  
 
+html, body {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
+}
+
+.selected {
+    color: white;
+    transform: scale(1.2);
 }
 
 header {
@@ -25,6 +34,7 @@ header {
     justify-content: center;
     align-items: center;
     font-size: 24px;
+    z-index: 1000;
 }
 
 nav {
@@ -71,19 +81,299 @@ nav a:hover {
 
 main {
     width: 100%;
+    height: 100vh;
+    background-color: #111;
+}
+
+.mainScreen_1 {
+    background: url(img/image.png);
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+}
+
+.mainScreen_2 {
+    background: url(img/screenshot.png);
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+}
+
+.mainScreen_3 {
+    background: url(img/screenshot_2.png);
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+}
+
+.mainScreen_4 {
+    background: #111;
+    width: 100%;
+    height: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainScreen_5 {
+    background: #111;
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainScreen_1_container {
+    backdrop-filter: blur(10px) brightness(0.5);
+    width: 100%;
+    height: 800px;
+}
+
+.mainScreen_2_container {
+    backdrop-filter: blur(10px) brightness(0.5);
+    width: 100%;
+    height: 800px;
+}
+
+.mainScreen_3_container {
+    backdrop-filter: blur(10px) brightness(0.5);
+    width: 100%;
+    height: 800px;
+}
+
+.mainScreen_4_container {
+    width: 1440px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mainScreen_5_container {
+    width: 1440px;
+    height: 800px;
+}
+
+.developerInfo {
+    color: white;
+    font-family: "minecraft-rus", sans-serif;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h2 {
+    color: white;
+    font-family: "minecraft-font-ten", sans-serif;
+    font-weight: normal;
+    font-size: 32px;
+}
+
+.mainScreen_1_content {
+    width: 1440px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-main section {
-    width: 100%;
-    height: 740px;
+.mainScreen_2_content {
+    width: 1440px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: start;
+    align-items: end;
 }
 
-.mainScreen_1::before {
-    content: "";
-    background-image: url(img/image.png);
-    z-index: -1;
-    width: 100%;
-    height: 740px;
-    filter: blur(10px);
+.mainScreen_3_content {
+    width: 1440px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: end;
+    align-items: end;
 }
+
+h1 {
+    margin: 0;
+    background-image: linear-gradient(to bottom, #FFFFFF, #797979);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 96px;
+    font-family: "minecraft-font-ten", sans-serif;
+    font-weight: normal
+}
+
+.mainScreen_1_content div {
+    font-family: "minecraft-rus", sans-serif;
+    color: white;
+    font-size: 32px;
+}
+
+.mainScreen_2_content div {
+    color: white;
+    font-family: "minecraft-rus", sans-serif;
+    font-size: 32px;
+    line-height: 209%;
+    margin-bottom: 43px;
+}
+
+.mainScreen_3_content div {
+    color: white;
+    font-family: "minecraft-rus", sans-serif;
+    font-size: 32px;
+    line-height: 209%;
+    margin-bottom: 43px;
+}
+
+.sectionCrossing {
+    width: 100%;
+    height: 260px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #111 52.08%, rgba(0, 0, 0, 0.00) 100%);
+    position: absolute;
+    bottom: 0;
+    z-index: 999;
+}
+
+.sectionCrossing_2 {
+    top: calc(740px * 2 - 10px);
+}
+
+.sectionCrossing_3 {
+    top: calc(740px * 3 + 40px);
+}   
+
+.cityJoin_url {
+    background: conic-gradient(from 224deg at 33.44% 19.15%, #FFB800 0deg, #FFBF1A 188.6151909828186deg, #FFC735 360deg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.2s;
+    display: inline-block;
+}
+
+.cityJoin_url:hover {
+    transform: scale(1.05);
+}
+
+.joinCity_button, .discordButton, .communityButton  {
+    border: 4px solid rgba(0, 0, 0, 0.25);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    font-family: "minecraft-font-ten", sans-serif;
+    font-size: 32px;
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+.joinCity_button:hover, .discordButton:hover, .communityButton:hover {
+    opacity: 1;
+}
+
+.joinCity_button {
+    background: linear-gradient(118deg, #FF6B00 0%, #FFB800 100%);
+    width: 100%;
+}
+
+.discordButton {
+    background: linear-gradient(112deg, #7289DA 0%, #6765D3 100%);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.communityButton {
+    background: linear-gradient(117deg, #6D5EF9 0%, #AA55FA 100%);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.galleryContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 35px;
+    padding-top: 100px;
+}
+
+.galleryRow {
+    display: flex;
+    align-self: stretch;
+    justify-content: space-evenly;
+}
+
+.galleryRow img {
+    border: 4px solid rgba(0, 0, 0, 0.25);
+    width: 400px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.galleryRow img:hover {
+    border: 4px solid white;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .modal img {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    margin-top: 50px;
+    border: 4px solid white;
+  }
+  
+  .modal #caption {
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .modal .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: "minecraft-rus", sans-serif;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .modal .close:hover,
+  .modal .close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
