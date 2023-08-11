@@ -249,6 +249,10 @@ h1 {
     z-index: 999;
 }
 
+.sectionCrossing_1 {
+    top: 670px;
+}
+
 .sectionCrossing_2 {
     top: calc(740px * 2 - 10px);
 }
@@ -320,6 +324,7 @@ h1 {
     display: flex;
     align-self: stretch;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .galleryRow img {
@@ -376,4 +381,264 @@ h1 {
     text-decoration: none;
     cursor: pointer;
   }
-  
+
+
+@media (max-width: 1440px) {
+    header section {
+        width: 100%;
+    }
+
+    .mainScreen_4_container {
+        width: 90%;
+    }
+
+    .mainScreen_5_container {
+        width: 90%;
+    }
+
+    .mainScreen_1_content {
+        width: 90%;
+    }
+    .mainScreen_2_content {
+        width: 90%;
+    }
+    .mainScreen_3_content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 688px) {
+    header section {
+        width: 100%;
+        gap: 15%;
+        flex-direction: column;
+    }
+
+    header {
+        height: 120px;
+    }
+
+    .mainScreen_4_container {
+        width: 90%;
+    }
+
+    .mainScreen_5_container {
+        width: 90%;
+    }
+
+    .mainScreen_1_content {
+        width: 90%;
+    }
+    .mainScreen_2_content {
+        width: 90%;
+    }
+    .mainScreen_3_content {
+        width: 90%;
+    }
+
+    .galleryContent {
+        padding-top: 150px;
+    }
+
+    .modal img {
+        margin-top: 100px;
+    }
+
+    .modal .close {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    header section {
+        width: 100%;
+        gap: 15%;
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 76px;
+    }
+
+    .mainScreen_1_content div {
+        font-size: 22px
+    }
+
+    .mainScreen_2_content div {
+        font-size: 22px
+    }
+
+    .mainScreen_3_content div {
+        font-size: 22px
+    }
+
+    header {
+        height: 120px;
+    }
+
+    .mainScreen_4_container {
+        width: 90%;
+    }
+
+    .mainScreen_5_container {
+        width: 90%;
+    }
+
+    .mainScreen_1_content {
+        width: 90%;
+    }
+    .mainScreen_2_content {
+        width: 90%;
+    }
+    .mainScreen_3_content {
+        width: 90%;
+    }
+
+    .galleryRow img {
+        width: 300px;
+    }
+
+    .galleryContent {
+        padding-top: 150px;
+    }
+
+    .modal img {
+        margin-top: 100px;
+    }
+
+    .modal .close {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 377px) {
+    header section {
+        width: 100%;
+        gap: 15%;
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 56px;
+    }
+
+    .mainScreen_1_content div {
+        font-size: 22px
+    }
+
+    .mainScreen_2_content div {
+        font-size: 22px
+    }
+
+    .mainScreen_3_content div {
+        font-size: 22px
+    }
+
+    header {
+        height: 120px;
+    }
+
+    .mainScreen_4_container {
+        width: 90%;
+    }
+
+    .mainScreen_5_container {
+        width: 90%;
+    }
+
+    .mainScreen_1_content {
+        width: 90%;
+    }
+    .mainScreen_2_content {
+        width: 90%;
+    }
+    .mainScreen_3_content {
+        width: 90%;
+    }
+
+    .galleryRow img {
+        width: 300px;
+    }
+
+    nav {
+        gap: 17px;
+    }
+
+    .galleryContent {
+        padding-top: 150px;
+    }
+
+    .modal img {
+        margin-top: 100px;
+    }
+
+    .modal .close {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 320px) {
+    header section {
+        width: 100%;
+        gap: 15%;
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 56px;
+    }
+
+    .mainScreen_1_content div {
+        font-size: 22px
+    }
+
+    .mainScreen_2_content div {
+        font-size: 22px
+    }
+
+    .mainScreen_3_content div {
+        font-size: 22px
+    }
+
+    header {
+        height: 120px;
+    }
+
+    .mainScreen_4_container {
+        width: 90%;
+    }
+
+    .mainScreen_5_container {
+        width: 90%;
+    }
+
+    .mainScreen_1_content {
+        width: 90%;
+    }
+    .mainScreen_2_content {
+        width: 90%;
+    }
+    .mainScreen_3_content {
+        width: 90%;
+    }
+
+    .galleryRow img {
+        width: 300px;
+    }
+
+    nav {
+        gap: 7px;
+    }
+
+    .galleryContent {
+        padding-top: 150px;
+    }
+
+    .modal img {
+        margin-top: 100px;
+    }
+
+    .modal .close {
+        margin-top: 100px;
+    }
+}
