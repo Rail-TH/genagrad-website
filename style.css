@@ -1,0 +1,89 @@
+@font-face {
+    font-family: "minecraft-font-ten";
+    src: url("fonts/289-font.ttf");
+  }
+
+  @font-face {
+    font-family: "minecraft-rus";
+    src: url("fonts/4197-font.ttf");
+  }  
+
+body {
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background: rgba(30.81, 30.81, 30.81, 0.50);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    font-family: "minecraft-font-ten", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 47px;
+}
+
+header section {
+    width: 1440px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 27%;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav a {
+    color: #CDCDCD;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.headerLogo {
+    background-image: linear-gradient(to bottom, white, #CACACA);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.headerLogo::first-letter {
+    background-image: linear-gradient(to bottom, #FF6B00, #FFB800);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 36px;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+main section {
+    width: 100%;
+    height: 740px;
+}
+
+.mainScreen_1::before {
+    content: "";
+    background-image: url(img/image.png);
+    z-index: -1;
+    width: 100%;
+    height: 740px;
+    filter: blur(10px);
+}
