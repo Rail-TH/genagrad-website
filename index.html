@@ -12,11 +12,20 @@
             <a href="index.html" class="headerLogo">
                 Генаград
             </a>
-            <nav>
+            <nav class="urls">
                 <a href="gallery.html">галерея</a>
                 <a href="#urls">ссылки</a>
                 <a href="#info">о сайте</a>
             </nav>
+            <nav class="burger-menu">
+                <input type="checkbox" id="burger-toggle" />
+                <label for="burger-toggle" class="burger-icon">&#9776;</label>
+                <ul class="menu-items" type="square">
+                  <li><a href="gallery.html" onclick="closeBurgerMenu()">галерея</a></li>
+                  <li><a href="#urls" onclick="closeBurgerMenu()">ссылки</a></li>
+                  <li><a href="#info" onclick="closeBurgerMenu()">о сайте</a></li>
+                </ul>
+              </nav>
         </section>
     </header>
     <main>
@@ -78,7 +87,7 @@
             <div class="mainScreen_5_container">
                 <h2>Сайт крафтил:</h2>
                 <div class="developerInfo">
-                    <div>
+                    <div class="developerInfo_container">
                         <img src="https://visage.surgeplay.com/face/80/d3102306d1a34fd79ac1272739c47cd2" alt="developerFace">
                         <h3>Rail_TH</h3>
                     </div>
@@ -89,5 +98,6 @@
             </div>
         </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

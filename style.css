@@ -37,7 +37,7 @@ header {
     z-index: 1000;
 }
 
-nav {
+.urls {
     display: flex;
     align-items: center;
     gap: 47px;
@@ -55,12 +55,12 @@ a {
     text-decoration: none;
 }
 
-nav a {
+.urls a {
     color: #CDCDCD;
     transition: 0.2s;
 }
 
-nav a:hover {
+.urls a:hover {
     color: white;
 }
 
@@ -88,6 +88,7 @@ main {
 .mainScreen_1 {
     background: url(img/image.png);
     background-size: cover;
+    background-attachment: fixed;
     width: 100%;
     height: 800px;
 }
@@ -95,6 +96,7 @@ main {
 .mainScreen_2 {
     background: url(img/screenshot.png);
     background-size: cover;
+    background-attachment: fixed;
     width: 100%;
     height: 800px;
 }
@@ -102,6 +104,7 @@ main {
 .mainScreen_3 {
     background: url(img/screenshot_2.png);
     background-size: cover;
+    background-attachment: fixed;
     width: 100%;
     height: 800px;
 }
@@ -163,6 +166,9 @@ main {
     color: white;
     font-family: "minecraft-rus", sans-serif;
     font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 h3 {
@@ -295,6 +301,7 @@ h1 {
 .joinCity_button {
     background: linear-gradient(118deg, #FF6B00 0%, #FFB800 100%);
     width: 100%;
+    font-size: 42px;
 }
 
 .discordButton {
@@ -382,6 +389,58 @@ h1 {
     cursor: pointer;
   }
 
+.developerInfo_container {
+    display: flex;
+    gap: 20px;
+}
+
+.burger-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1100;
+    height: 100vh;
+  }
+  
+  .burger-icon {
+    display: block;
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+    display: none;
+  }
+  
+  .menu-items {
+    position: absolute;
+    top: 100px;
+    right: -300px; /* Изначально скрываем меню за пределами экрана */
+    width: 200px;
+    height: 100%;
+    background: rgba(30.81, 30.81, 30.81, 0.50);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    color: white;
+    transition: right 0.2s ease-in;
+  }
+  
+  .menu-items li {
+    margin-bottom: 10px;
+  }
+  
+  .menu-items a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* При отмеченном чекбоксе показываем меню */
+  #burger-toggle:checked ~ .menu-items {
+    right: 0;
+  }
+
+input {
+    display: none;
+}
+
 
 @media (max-width: 1440px) {
     header section {
@@ -411,11 +470,10 @@ h1 {
     header section {
         width: 100%;
         gap: 15%;
-        flex-direction: column;
     }
 
-    header {
-        height: 120px;
+    .urls {
+        display: none;
     }
 
     .mainScreen_4_container {
@@ -446,6 +504,14 @@ h1 {
 
     .modal .close {
         margin-top: 100px;
+    }
+
+    .burger-icon {
+        display: block;
+    }
+
+    .close {
+        float: left;
     }
 }
 
@@ -472,10 +538,6 @@ h1 {
         font-size: 22px
     }
 
-    header {
-        height: 120px;
-    }
-
     .mainScreen_4_container {
         width: 90%;
     }
@@ -508,6 +570,14 @@ h1 {
 
     .modal .close {
         margin-top: 100px;
+    }
+
+    .close {
+        float: left;
+    }
+
+    .joinCity_button {
+        font-size: 32px;
     }
 }
 
@@ -534,10 +604,6 @@ h1 {
         font-size: 22px
     }
 
-    header {
-        height: 120px;
-    }
-
     .mainScreen_4_container {
         width: 90%;
     }
@@ -560,7 +626,7 @@ h1 {
         width: 300px;
     }
 
-    nav {
+    .urls {
         gap: 17px;
     }
 
@@ -574,6 +640,14 @@ h1 {
 
     .modal .close {
         margin-top: 100px;
+    }
+
+    .close {
+        float: left;
+    }
+    
+    .joinCity_button {
+        font-size: 32px;
     }
 }
 
@@ -598,11 +672,7 @@ h1 {
 
     .mainScreen_3_content div {
         font-size: 22px
-    }
-
-    header {
-        height: 120px;
-    }
+    } 
 
     .mainScreen_4_container {
         width: 90%;
@@ -626,7 +696,7 @@ h1 {
         width: 300px;
     }
 
-    nav {
+    .urls {
         gap: 7px;
     }
 
@@ -640,5 +710,13 @@ h1 {
 
     .modal .close {
         margin-top: 100px;
+    }
+
+    .close {
+        float: left;
+    }
+
+    .joinCity_button {
+        font-size: 32px;
     }
 }

@@ -8,13 +8,15 @@ const caption = document.getElementById('caption');
 const closeBtn = document.querySelector('.close');
 
 // При клике на изображение открываем модальное окно
-images.forEach(image => {
-  image.addEventListener('click', () => {
-    modal.style.display = 'block';
-    modalImage.src = image.src;
-    caption.textContent = image.alt;
+if (images != null) {
+  images.forEach(image => {
+    image.addEventListener('click', () => {
+      modal.style.display = 'block';
+      modalImage.src = image.src;
+      caption.textContent = image.alt;
+    });
   });
-});
+}
 
 // При клике на кнопку закрытия закрываем модальное окно
 closeBtn.addEventListener('click', () => {
@@ -27,3 +29,7 @@ window.addEventListener('click', (event) => {
     modal.style.display = 'none';
   }
 });
+
+function closeBurgerMenu() {
+  document.getElementById('burger-toggle').checked = false;
+}

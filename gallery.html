@@ -12,11 +12,20 @@
             <a href="index.html" class="headerLogo">
                 Генаград
             </a>
-            <nav>
+            <nav class="urls">
                 <a href="gallery.html" class="selected">галерея</a>
                 <a href="#urls">ссылки</a>
                 <a href="#info">о сайте</a>
             </nav>
+            <nav class="burger-menu">
+                <input type="checkbox" id="burger-toggle" />
+                <label for="burger-toggle" class="burger-icon">&#9776;</label>
+                <ul class="menu-items" type="square">
+                  <li><a href="gallery.html" onclick="closeBurgerMenu()" class="selected">галерея</a></li>
+                  <li><a href="#urls" onclick="closeBurgerMenu()">ссылки</a></li>
+                  <li><a href="#info" onclick="closeBurgerMenu()">о сайте</a></li>
+                </ul>
+              </nav>
         </section>
     </header>
     <main>
