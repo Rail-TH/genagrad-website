@@ -13,7 +13,6 @@ if (images != null) {
     image.addEventListener('click', () => {
       modal.style.display = 'block';
       modalImage.src = image.src;
-      caption.textContent = image.alt;
     });
   });
 }
