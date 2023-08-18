@@ -81,12 +81,12 @@ a {
 
 main {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #111;
 }
 
 .mainScreen_1 {
-    background: url(img/image.png);
+    background: url(img/2023-08-18_14.09.58.png);
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
@@ -102,7 +102,7 @@ main {
 }
 
 .mainScreen_3 {
-    background: url(img/screenshot_2.png);
+    background: url(img/2023-08-18_14.12.07.png);
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
@@ -328,7 +328,10 @@ h1 {
     justify-content: space-around;
     align-items: center;
     gap: 35px;
+    max-width: 1440px;
     padding-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .galleryRow {
@@ -336,6 +339,7 @@ h1 {
     align-self: stretch;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .galleryRow img {
