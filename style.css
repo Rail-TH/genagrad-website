@@ -420,15 +420,16 @@ h1 {
   
   .menu-items {
     position: absolute;
-    top: 100px;
     right: -300px; /* Изначально скрываем меню за пределами экрана */
     width: 200px;
+    top: 59px;
     height: 100%;
     background: rgba(30.81, 30.81, 30.81, 0.50);
     backdrop-filter: blur(10px);
     padding: 40px;
     color: white;
     transition: right 0.2s ease-in;
+    margin-top: 0;
   }
   
   .menu-items li {
