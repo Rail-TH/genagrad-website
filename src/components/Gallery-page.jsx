@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from 'react-helmet';
 import img1 from '../assets/img/image1.webp';
 import img2 from '../assets/img/image2.webp';
 import img3 from '../assets/img/image3.webp';
@@ -23,6 +24,9 @@ function GalleryPage() {
 
   return (
     <>
+      <Helmet>
+        <meta name="description" content="В галерее Генаграда самые лучшие виды на город!" />
+      </Helmet>
       <section className="galleryContent">
         <div className="galleryRow">
           <motion.img
