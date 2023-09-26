@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import img1 from '../assets/img/image1.png';
-import img2 from '../assets/img/image2.png';
-import img3 from '../assets/img/image3.png';
-import img4 from '../assets/img/image4.png';
-import img5 from '../assets/img/image5.png';
-import img6 from '../assets/img/image6.png';
-import img7 from '../assets/img/image7.png';
-import img8 from '../assets/img/image8.png';
-import img9 from '../assets/img/image9.png';
+import img1 from '../assets/img/image1.webp';
+import img2 from '../assets/img/image2.webp';
+import img3 from '../assets/img/image3.webp';
+import img4 from '../assets/img/image4.webp';
+import img5 from '../assets/img/image5.webp';
+import img6 from '../assets/img/image6.webp';
+import img7 from '../assets/img/image7.webp';
+import img8 from '../assets/img/image8.webp';
+import img9 from '../assets/img/image9.webp';
 
 function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -30,54 +30,63 @@ function GalleryPage() {
             alt="minecraftCityScreenshot"
             onClick={() => openImage(img1)}
             whileTap={{ scale: 0.95 }}
+            loading="lazy"
           />
           <motion.img
             src={img2}
             alt="minecraftCityScreenshot"
             onClick={() => openImage(img2)}
             whileTap={{ scale: 0.95 }}
+            loading="lazy"
           />
           <motion.img
             src={img3}
             alt="minecraftCityScreenshot"
             onClick={() => openImage(img3)}
             whileTap={{ scale: 0.95 }}
+            loading="lazy"
           />
           <motion.img
             src={img4}
             alt="minecraftCityScreenshot"
             onClick={() => openImage(img4)}
             whileTap={{ scale: 0.95 }}
+            loading="lazy"
           />
           <motion.img
             src={img5}
             alt="minecraftCityScreenshot"
             onClick={() => openImage(img5)}
             whileTap={{ scale: 0.95 }}
+            loading="lazy"
           />
           <motion.img
             src={img6}
             alt="minecraftCityScreenshot"
             onClick={() => openImage(img6)}
             whileTap={{ scale: 0.95 }}
+            loading="lazy"
           />
           <motion.img
             src={img7}
             alt="minecraftCityScreenshot"
             onClick={() => openImage(img7)}
             whileTap={{ scale: 0.95 }}
+            loading="lazy"
           />
           <motion.img
             src={img8}
             alt="minecraftCityScreenshot"
             onClick={() => openImage(img8)}
             whileTap={{ scale: 0.95 }}
+            loading="lazy"
           />
           <motion.img
             src={img9}
             alt="minecraftCityScreenshot"
             onClick={() => openImage(img9)}
             whileTap={{ scale: 0.95 }}
+            loading="lazy"
           />
         </div>
         <div className="galleryRow"></div>
