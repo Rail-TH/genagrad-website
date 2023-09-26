@@ -1,11 +1,13 @@
 @font-face {
     font-family: "minecraft-font-ten";
     src: url("../assets/fonts/minecraft-ten.ttf");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "minecraft-rus";
     src: url("../assets/fonts/minecraft-rus.ttf");
+    font-display: swap;
 }  
 
 html, body {
