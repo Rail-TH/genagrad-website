@@ -43,13 +43,13 @@ function Header() {
             <label htmlFor="burger-toggle" className="burger-icon">&#9776;</label>
             <ul className="menu-items">
               <li>
-                <motion.a
-                  href="/gallery"
+                <motion.Link
+                  to="/gallery"
                   initial={{ scale: 1 }}
                   whileTap={{ scale: 0.85 }}
                 >
                   галерея
-                </motion.a>
+                </motion.Link>
               </li>
               <li>
                 <motion.a
