@@ -43,6 +43,15 @@ header {
     display: flex;
     align-items: center;
     gap: 47px;
+
+    a {
+        color: #CDCDCD;
+        transition: 0.2s;
+    }
+
+    a:hover {
+        color: white;
+    }
 }
 
 header section {
@@ -55,15 +64,6 @@ header section {
 
 a {
     text-decoration: none;
-}
-
-.urls a {
-    color: #CDCDCD;
-    transition: 0.2s;
-}
-
-.urls a:hover {
-    color: white;
 }
 
 .headerLogo {
@@ -197,6 +197,12 @@ ul {
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+
+    div {
+        font-family: "minecraft-rus", sans-serif;
+        color: white;
+        font-size: 32px;
+    }
 }
 
 .mainScreen_2_content {
@@ -207,6 +213,14 @@ ul {
     display: flex;
     justify-content: start;
     align-items: end;
+
+    div {
+        color: white;
+        font-family: "minecraft-rus", sans-serif;
+        font-size: 32px;
+        line-height: 209%;
+        margin-bottom: 43px;
+    }
 }
 
 .mainScreen_3_content {
@@ -217,6 +231,14 @@ ul {
     display: flex;
     justify-content: end;
     align-items: end;
+
+    div {
+        color: white;
+        font-family: "minecraft-rus", sans-serif;
+        font-size: 32px;
+        line-height: 209%;
+        margin-bottom: 43px;
+    }
 }
 
 h1 {
@@ -228,28 +250,6 @@ h1 {
     font-size: 96px;
     font-family: "minecraft-font-ten", sans-serif;
     font-weight: normal
-}
-
-.mainScreen_1_content div {
-    font-family: "minecraft-rus", sans-serif;
-    color: white;
-    font-size: 32px;
-}
-
-.mainScreen_2_content div {
-    color: white;
-    font-family: "minecraft-rus", sans-serif;
-    font-size: 32px;
-    line-height: 209%;
-    margin-bottom: 43px;
-}
-
-.mainScreen_3_content div {
-    color: white;
-    font-family: "minecraft-rus", sans-serif;
-    font-size: 32px;
-    line-height: 209%;
-    margin-bottom: 43px;
 }
 
 .sectionCrossing {
@@ -342,17 +342,17 @@ h1 {
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
-}
 
-.galleryRow img {
-    border: 4px solid rgba(0, 0, 0, 0.25);
-    width: 400px;
-    cursor: pointer;
-    transition: 0.2s;
-}
+    img {
+        border: 4px solid rgba(0, 0, 0, 0.25);
+        width: 400px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
 
-.galleryRow img:hover {
-    border: 4px solid white;
+    img:hover {
+        border: 4px solid white;
+    }
 }
 
 .fullscreenImage {
@@ -363,6 +363,11 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    img {
+        width: 70%;
+        z-index: 2;
+    }
 }
 
 .fullscreenImage::before {
@@ -376,11 +381,6 @@ h1 {
     z-index: 1; /* установите z-index, чтобы псевдоэлемент был над изображением */
 }
 
-.fullscreenImage img {
-    width: 70%;
-    z-index: 2;
-}
-
 .developerInfo_container {
     display: flex;
     gap: 20px;
@@ -392,19 +392,19 @@ h1 {
     right: 0;
     z-index: 1100;
     height: 100vh;
-  }
-  
-  .burger-icon {
+}
+
+.burger-icon {
     display: block;
     font-size: 40px;
     cursor: pointer;
     color: white;
     display: none;
-  }
-  
-  .menu-items {
+}
+
+.menu-items {
     position: absolute;
-    right: -300px; /* Изначально скрываем меню за пределами экрана */
+    right: -300px;
     width: 200px;
     top: 59px;
     height: 100%;
@@ -414,21 +414,20 @@ h1 {
     color: white;
     transition: right 0.2s ease-out;
     margin-top: 0;
-  }
-  
-  .menu-items li {
-    margin-bottom: 10px;
-  }
-  
-  .menu-items a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  /* При отмеченном чекбоксе показываем меню */
-  #burger-toggle:checked ~ .menu-items {
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+#burger-toggle:checked ~ .menu-items {
     right: 0;
-  }
+}
 
 input {
     display: none;
@@ -460,31 +459,14 @@ input {
 }
 
 @media (max-width: 688px) {
-    header section {
-        width: 100%;
-        gap: 15%;
+    header {
+        section {
+            gap: 15%;
+        }
     }
 
     .urls {
         display: none;
-    }
-
-    .mainScreen_4_container {
-        width: 90%;
-    }
-
-    .mainScreen_5_container {
-        width: 90%;
-    }
-
-    .mainScreen_1_content {
-        width: 90%;
-    }
-    .mainScreen_2_content {
-        width: 90%;
-    }
-    .mainScreen_3_content {
-        width: 90%;
     }
 
     .galleryContent {
@@ -495,58 +477,46 @@ input {
         display: block;
     }
 
-    .fullscreenImage img {
-        width: 90%;
+    .fullscreenImage {
+        img {
+            width: 90%;
+        }
     }
 }
 
 @media (max-width: 480px) {
-    header section {
-        width: 100%;
-        gap: 15%;
-        flex-direction: column;
+    header {
+        section {
+            flex-direction: column;
+        }
     }
 
     h1 {
         font-size: 76px;
     }
 
-    .mainScreen_1_content div {
-        font-size: 22px
-    }
-
-    .mainScreen_2_content div {
-        font-size: 22px
-    }
-
-    .mainScreen_3_content div {
-        font-size: 22px
-    }
-
-    .mainScreen_4_container {
-        width: 90%;
-    }
-
-    .mainScreen_5_container {
-        width: 90%;
-    }
-
     .mainScreen_1_content {
-        width: 90%;
+        div {
+            font-size: 22px
+        }
     }
+
     .mainScreen_2_content {
-        width: 90%;
+        div {
+            font-size: 22px
+        }
     }
+
     .mainScreen_3_content {
-        width: 90%;
+        div {
+            font-size: 22px
+        }
     }
 
-    .galleryRow img {
-        width: 300px;
-    }
-
-    .galleryContent {
-        padding-top: 150px;
+    .galleryRow {
+        img {
+            width: 300px;
+        }
     }
 
     .joinCity_button {
@@ -555,117 +525,17 @@ input {
 }
 
 @media (max-width: 377px) {
-    header section {
-        width: 100%;
-        gap: 15%;
-        flex-direction: column;
-    }
-
     h1 {
         font-size: 56px;
-    }
-
-    .mainScreen_1_content div {
-        font-size: 22px
-    }
-
-    .mainScreen_2_content div {
-        font-size: 22px
-    }
-
-    .mainScreen_3_content div {
-        font-size: 22px
-    }
-
-    .mainScreen_4_container {
-        width: 90%;
-    }
-
-    .mainScreen_5_container {
-        width: 90%;
-    }
-
-    .mainScreen_1_content {
-        width: 90%;
-    }
-    .mainScreen_2_content {
-        width: 90%;
-    }
-    .mainScreen_3_content {
-        width: 90%;
-    }
-
-    .galleryRow img {
-        width: 300px;
     }
 
     .urls {
         gap: 17px;
     }
-
-    .galleryContent {
-        padding-top: 150px;
-    }
-    
-    .joinCity_button {
-        font-size: 32px;
-    }
 }
 
 @media (max-width: 320px) {
-    header section {
-        width: 100%;
-        gap: 15%;
-        flex-direction: column;
-    }
-
-    h1 {
-        font-size: 56px;
-    }
-
-    .mainScreen_1_content div {
-        font-size: 22px
-    }
-
-    .mainScreen_2_content div {
-        font-size: 22px
-    }
-
-    .mainScreen_3_content div {
-        font-size: 22px
-    } 
-
-    .mainScreen_4_container {
-        width: 90%;
-    }
-
-    .mainScreen_5_container {
-        width: 90%;
-    }
-
-    .mainScreen_1_content {
-        width: 90%;
-    }
-    .mainScreen_2_content {
-        width: 90%;
-    }
-    .mainScreen_3_content {
-        width: 90%;
-    }
-
-    .galleryRow img {
-        width: 300px;
-    }
-
     .urls {
         gap: 7px;
-    }
-
-    .galleryContent {
-        padding-top: 150px;
-    }
-
-    .joinCity_button {
-        font-size: 32px;
     }
 }
