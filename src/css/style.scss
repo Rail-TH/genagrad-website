@@ -37,6 +37,17 @@ header {
     align-items: center;
     font-size: 24px;
     z-index: 1000;
+    
+    section {
+        width: 1440px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 27%;
+        box-sizing: border-box;
+        padding-right: 150px;
+    }
 }
 
 .urls {
@@ -52,14 +63,6 @@ header {
     a:hover {
         color: white;
     }
-}
-
-header section {
-    width: 1440px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    gap: 27%;
 }
 
 a {
@@ -358,7 +361,7 @@ h1 {
 .fullscreenImage {
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     display: flex;
     justify-content: center;
@@ -437,6 +440,10 @@ input {
 @media (max-width: 1440px) {
     header section {
         width: 100%;
+    }
+
+    .headerLogo {
+        margin-left: 25px;
     }
 
     .mainScreen_4_container {

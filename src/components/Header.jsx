@@ -8,19 +8,17 @@ function Header() {
   return (
     <>
       <header>
+        <Link to="/" className="headerLogo">
+          Генаград
+        </Link>
         <section>
-          <Link to="/" className="headerLogo">
-            Генаград
-          </Link>
           <nav className="urls">
-            <motion.a
-              href="/gallery"
+            <motion.div
               initial={{ scale: 1 }}
-              whileTap={{ scale: 0.85 }}
-              className="navLink"
+              whileTap={{ scale: 0.95 }}
             >
-              галерея
-            </motion.a>
+              <Link to="/gallery" className="navLink">галерея</Link>
+            </motion.div>
             <motion.a
               href="#urls"
               initial={{ scale: 1 }}
@@ -43,13 +41,12 @@ function Header() {
             <label htmlFor="burger-toggle" className="burger-icon">&#9776;</label>
             <ul className="menu-items">
               <li>
-                <motion.Link
-                  to="/gallery"
+                <motion.div
                   initial={{ scale: 1 }}
-                  whileTap={{ scale: 0.85 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  галерея
-                </motion.Link>
+                  <Link to="/gallery" className="navLink">галерея</Link>
+                </motion.div>
               </li>
               <li>
                 <motion.a
